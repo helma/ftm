@@ -5,5 +5,5 @@ echo $dir
 killall xbindkeys
 killall mplayer
 xbindkeys -f ./xbindkeysrc
-ruby playlist-new.rb $dir
+ruby playlist0.rb $dir
 mplayer -nolirc -slave -idle -quiet -msglevel all=-1 -msglevel global=5 -playlist ./playlists/0.m3u -shuffle -input file=mplayer-input > mplayer-current &

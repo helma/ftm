@@ -1,13 +1,13 @@
-"/home/ch/src/fsm/fsm-tag.rb 1"
+"/home/ch/src/ftm/tag.rb 1"
   F1
 
-"/home/ch/src/fsm/fsm-tag.rb 2"
+"/home/ch/src/ftm/tag.rb 2"
   F2
 
-"/home/ch/src/fsm/fsm-tag.rb 3"
+"/home/ch/src/ftm/tag.rb 3"
   F3
 
-"/home/ch/src/fsm/fsm-tag.rb 4"
+"/home/ch/src/ftm/tag.rb 4"
   F4
 
 "echo 'pt_step +1' > mplayer-input"
