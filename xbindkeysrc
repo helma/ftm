@@ -1,0 +1,32 @@
+"/home/ch/src/fsm/fsm-tag.rb 1"
+  F1
+
+"/home/ch/src/fsm/fsm-tag.rb 2"
+  F2
+
+"/home/ch/src/fsm/fsm-tag.rb 3"
+  F3
+
+"/home/ch/src/fsm/fsm-tag.rb 4"
+  F4
+
+"echo 'pt_step +1' > mplayer-input"
+  XF86AudioPlay
+
+"echo 'seek -10' > mplayer-input"
+  XF86AudioPrev
+
+"echo 'seek 10' > mplayer-input"
+  XF86AudioNext
+
+"echo 'pause' > mplayer-input"
+  XF86AudioStop
+
+"echo 'seek 0 2' > mplayer-input"
+  Control + XF86AudioPrev
+
+"echo 'seek 50 1' > mplayer-input"
+  Control + XF86AudioNext
+
+"echo 'quit' > mplayer-input"
+  Control + XF86AudioStop
