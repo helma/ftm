@@ -19,8 +19,11 @@
 "echo 'seek 10' > mplayer-input"
   XF86AudioNext
 
-"echo 'pause' > mplayer-input"
+"echo 'pt_step -1' > mplayer-input"
   XF86AudioStop
+
+"echo 'pause' > mplayer-input"
+  Control + XF86AudioPlay
 
 "echo 'seek 0 2' > mplayer-input"
   Control + XF86AudioPrev

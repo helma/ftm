@@ -31,3 +31,5 @@ end
 files = read tag
 files << current
 write tag, files
+date = `date`.chomp
+`cd #{File.join(File.dirname(__FILE__),"playlists")} && git commit -am "#{date}"`
