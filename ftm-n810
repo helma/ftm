@@ -1,0 +1,10 @@
+#!/bin/sh
+
+dir=/media/mmc1
+rm -f /tmp/mplayer-input
+mkfifo /tmp/mplayer-input
+#killall xbindkeys
+killall mplayer
+/usr/bin/ruby1.8 /usr/local/bin/playlist0.rb $dir
+mplayer -nolirc -slave -idle -quiet -msglevel all=-1 -msglevel global=5 -playlist $dir/playlists/0.m3u -shuffle -input file=/tmp/mplayer-input > $dir/mplayer-current &
+/usr/bin/python2.5 /usr/local/bin/n810-gui.py

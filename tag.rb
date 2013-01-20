@@ -4,21 +4,21 @@ tag = ARGV[0]
 files = []
 
 def read tag
-  File.read(File.join(File.dirname(__FILE__),"playlists","#{tag}.m3u")).split("\n").select{|l| l.match(/^[\/a-zA-Z]/)}
+  File.read(File.join("/media/mmc1","playlists","#{tag}.m3u")).split("\n").select{|l| l.match(/^[\/a-zA-Z]/)}
 rescue
   Array.new
 end
 
 def write tag, files
-  File.open(File.join(File.dirname(__FILE__),"playlists","#{tag}.m3u"),"w+") do |f|
+  File.open(File.join("/media/mmc1","playlists","#{tag}.m3u"),"w+") do |f|
     f.puts "#EXTM3U"
     f.puts files.compact.uniq.join("\n")
   end
 end
 
-File.open(File.join(File.dirname(__FILE__),"mplayer-input"),"w+"){|f| f.puts "get_property path"}
+File.open("/tmp/mplayer-input","w+"){|f| f.puts "get_property path"}
 sleep 1
-current = File.readlines(File.join(File.dirname(__FILE__),"mplayer-current")).last.sub(/^ANS_path=/,'').chomp
+current = File.readlines(File.join("/media/mmc1","mplayer-current")).last.sub(/^ANS_path=/,'').chomp
 
 if tag =~ /^0|1|2|3|4$/
   (0..4).each do |n|
@@ -31,5 +31,3 @@ end
 files = read tag
 files << current
 write tag, files
-date = `date`.chomp
-`cd #{File.join(File.dirname(__FILE__),"playlists")} && git commit -am "#{date}"`
