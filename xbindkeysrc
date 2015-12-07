@@ -7,29 +7,23 @@
 "/home/ch/src/ftm/tag.rb 3"
   F3
 
-"/home/ch/src/ftm/tag.rb 4"
-  F4
+"/home/ch/src/ftm/tag.rb DELETE"
+  F12
 
-"echo 'pt_step +1' > mplayer-input"
-  XF86AudioPlay
-
-"echo 'seek -10' > mplayer-input"
-  XF86AudioPrev
-
-"echo 'seek 10' > mplayer-input"
+"echo 'quit' > /tmp/mplayer-input"
   XF86AudioNext
 
-"echo 'pt_step -1' > mplayer-input"
+"killall ftm-player.rb"
   XF86AudioStop
 
-"echo 'pause' > mplayer-input"
-  Control + XF86AudioPlay
+"echo 'pause' > /tmp/mplayer-input"
+  XF86AudioPlay
 
-"echo 'seek 0 2' > mplayer-input"
+"echo 'seek -10' > /tmp/mplayer-input"
   Control + XF86AudioPrev
 
-"echo 'seek 50 1' > mplayer-input"
+"echo 'seek 10' > /tmp/mplayer-input"
   Control + XF86AudioNext
 
-"echo 'quit' > mplayer-input"
-  Control + XF86AudioStop
+"/home/ch/src/ftm/info.rb|dmenu -b"
+  XF86AudioPrev

@@ -1,9 +1,11 @@
 #!/bin/sh
 
-dir=$HOME/music/download
-echo $dir
+dir=$HOME/music
+#echo $dir
+rm -f /tmp/mplayer-input
+mkfifo /tmp/mplayer-input
 killall xbindkeys
 killall mplayer
-xbindkeys -f ./xbindkeysrc
-ruby playlist0.rb $dir
-mplayer -nolirc -slave -idle -quiet -msglevel all=-1 -msglevel global=5 -playlist ./playlists/0.m3u -shuffle -input file=mplayer-input > mplayer-current &
+xbindkeys -f $HOME/src/ftm/xbindkeysrc
+#ruby playlist0.rb $dir
+mplayer -nolirc -slave -idle -quiet -msglevel all=-1 -msglevel global=5 -playlist $dir/playlists/INBOX.m3u -shuffle -input file=/tmp/mplayer-input > /tmp/mplayer-current &
