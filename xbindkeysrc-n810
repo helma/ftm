@@ -1,0 +1,22 @@
+"echo 'tag 0' > fsm-server-input"
+  0
+"echo 'tag 1' > fsm-server-input"
+  1
+"echo 'tag 2' > fsm-server-input"
+  2
+"echo 'tag 3' > fsm-server-input"
+  3
+"echo 'tag 4' > fsm-server-input"
+  4
+"echo 'pause' > mplayer-input"
+  Space
+"echo 'seek 10' > mplayer-input"
+  Right
+"echo 'seek -10' > mplayer-input"
+  Left
+"echo 'seek 0 2' > mplayer-input"
+  Shift+Left
+"echo 'next_track' > fsm-server-input"
+  Down
+"echo 'prev_track' > fsm-server-input"
+  Up
